@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <!-- <link rel="stylesheet" href="css/next-page.css" /> -->
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Sidebar start -->
+      <div class="sidebar">
+        <div>
+          <span class="circle selected">
+            <span>1</span>
+          </span>
+          <div class="sidebar-info">
+            <span>Step 1</span>
+            <span>YOUR INFO</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="circle">
+            <span>2</span>
+          </span>
+          <div class="sidebar-info">
+            <span>Step 2</span>
+            <span>SELECT PLAN</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="circle">
+            <span>3</span>
+          </span>
+          <div class="sidebar-info">
+            <span>Step 3</span>
+            <span>ADD-ONS</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="circle">
+            <span>4</span>
+          </span>
+          <div class="sidebar-info">
+            <span>Step 4</span>
+            <span>SUMMARY</span>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+
+      <!-- Step 1 start -->
+      <div class="step one">
+        <form action="" class="push-left push-right">
+          <h1>Personal info</h1>
+
+          <p>Please provide your name, email address, and phone number.</p>
+
+          <div style="margin-top: 1rem" class="inputs">
+            <div class="labels">
+              <label for="name">Name</label>
+              <label id="name-error-message" for="error-message"></label>
+            </div>
+            <input id="name" type="text" placeholder="e.g. Stephen King" />
+          </div>
+
+          <div class="inputs">
+            <div class="labels">
+              <label for="email">Email Address</label>
+              <label id="email-error-message" for="error-message"></label>
+            </div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="e.g. stephenking@lorem.com" />
+          </div>
+
+          <div class="inputs">
+            <div class="labels">
+              <label for="phone">Phone Number</label>
+              <label id="number-error-message" for="error-message"></label>
+            </div>
+            <input
+              type="number"
+              name="number"
+              id="number"
+              placeholder="e.g. +1 234 567 890" />
+          </div>
+        </form>
+        <div class="card-footer">
+          <button
+            id="btn_one"
+            type="submit"
+            class="btn next current-one to-two">
+            Next Step
+          </button>
+        </div>
+      </div>
+      <!-- Step 1 ends -->
+
+      <!-- Step 2 start -->
+      <div class="step two">
+        <div class="content push-right push-left">
+          <h1>Select your plan</h1>
+
+          <p>You have the option of monthly or yearly billing.</p>
+
+          <div class="cards">
+            <div class="card arcade selected">
+              <div class="logo">
+                <img src="assets/images/icon-arcade.svg" alt="" />
+              </div>
+              <div class="plan monthly">
+                <span>Arcade</span>
+                <span>$9/mo</span>
+              </div>
+              <div class="plan yearly">
+                <span>Arcade</span>
+                <span>$90/yr</span>
+                <span>2 months free</span>
+              </div>
+            </div>
+
+            <div class="card advanced">
+              <div class="logo">
+                <img src="assets/images/icon-advanced.svg" alt="" />
+              </div>
+              <div class="plan monthly">
+                <span>Advanced</span>
+                <span>$12/mo</span>
+              </div>
+              <div class="plan yearly">
+                <span>Advanced</span>
+                <span>$120/yr</span>
+                <span>2 months free</span>
+              </div>
+            </div>
+
+            <div class="card pro">
+              <div class="logo">
+                <img src="assets/images/icon-pro.svg" alt="" />
+              </div>
+              <div class="plan monthly">
+                <span>Pro</span>
+                <span>$15/mo</span>
+              </div>
+              <div class="plan yearly">
+                <span>Pro</span>
+                <span>$150/yr</span>
+                <span>2 months free</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="monthly-yearly">
+            <span class="selected">monthly</span>
+            <div class="side-shift">
+              <div class="circle"></div>
+            </div>
+            <span>yearly</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <span id="btn_two_back" class="btn back current-two to-one"> Go back</span>
+          <button id="btn_two" class="btn next current-two to-three">
+            Next Step
+          </button>
+        </div>
+      </div>
+      <!-- Step 2 ends -->
+
+      <!-- Step 3 start -->
+      <div class="step three">
+        <div class="content push-right push-left">
+          <h1>Pick add-ons</h1>
+
+          <p>Add-ons help enhance your gaming experience.</p>
+
+          <div class="card-add-ons">
+            <div class="card">
+              <input id="online-service" type="checkbox" />
+              <div class="add-ons-type">
+                <p>Online service</p>
+                <p>Access to multiplayer games</p>
+              </div>
+              <span id="price_monthly_service">+$1/mo</span>
+              <span id="price_yearly_service">+$10/yr</span>
+            </div>
+            <div class="card">
+              <input id="larger-storage" type="checkbox" />
+              <div class="add-ons-type">
+                <p>Larger storage</p>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+              <span id="price_monthly_storage">+$2/mo</span>
+              <span id="price_yearly_storage">+$20/yr</span>
+            </div>
+            <div class="card">
+              <input id="Customizable-profile" type="checkbox" />
+              <div class="add-ons-type">
+                <p>Customizable Profile</p>
+                <p>Custom theme on your profile</p>
+              </div>
+              <span id="price_monthly_profile">+$2/mo</span>
+              <span id="price_yearly_profile">+$20/yr</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <span class="btn back current-three to-two"> Go back</span>
+          <button id="btn_three" class="btn next current-three to-four">
+            Next Step
+          </button>
+        </div>
+      </div>
+      <!-- Step 3 end -->
+
+      <!-- Step 4 start -->
+      <div class="step four">
+        <div class="content push-right push-left">
+          <h1>Finishing up</h1>
+
+          <p>Double-check everything looks OK before confirming</p>
+
+          <div class="card-summary">
+            <div class="card">
+              <div class="plan">
+                <div>
+                  <span id="label_plan"
+                    >Arcade <b id="label_plan_period">(Monthly)</b>
+                  </span>
+                  <span>Change</span>
+                </div>
+                <span id="label_plan_cost">+$9/mon</span>
+              </div>
+
+              <div id="add-ons-option">
+                <div class="options">
+                  <span>Online Services</span>
+                  <span>+$1/mon</span>
+                </div>
+
+                <div class="options">
+                  <span>larger Strorage</span>
+                  <span>+$2/mon</span>
+                </div>
+
+                <div class="options">
+                  <span>larger Strorage</span>
+                  <span>+$2/mon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="total">
+            <span id="label_total_cost">Total (per month)</span>
+            <span id="total_cost">+$12/mo</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <span class="btn back current-four to-three"> Go back</span>
+          <button id="btn_four" class="btn next current-four to-five">
+            Confirm
+          </button>
+        </div>
+      </div>
+      <!-- Step 4 end -->
+
+      <!-- Step 5 start -->
+      <div class="step five">
+        <div class="content push-right push-left">
+          <div class="img-container">
+            <img src="assets/images/icon-thank-you.svg" alt="" />
+          </div>
+          <h1>Thank you!</h1>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@loremgaming.com.
+          </p>
+        </div>
+      </div>
+      <!-- Step 5 end -->
+    </main>
+
+    <div style="margin-top: 2rem" class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/card-selection.js"></script>
+  <script src="js/summary.js"></script>
+  <script src="js/main.js"></script>
+</html>
