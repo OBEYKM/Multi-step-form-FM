@@ -29,7 +29,7 @@
 
     --step-one-form-p:80%;
 
-    --plan-font-size : .2rem;
+    --plan-font-size : 16px;
 
 
 
@@ -160,8 +160,8 @@
         display: none;
     }
 
-    .card > .plan.monthly :first-child ,
-    .card > .plan.yearly :first-child {
+    .card > .plan.monthly  ,
+    .card > .plan.yearly{
     color: var(--Purplish-blue);
     font-weight: 650;
     font-size: var(--plan-font-size);
