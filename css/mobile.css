@@ -29,6 +29,8 @@
 
     --step-one-form-p:80%;
 
+    --plan-font-size : .2rem;
+
 
 
 }
@@ -114,6 +116,14 @@
         width: var(--step-one-form-p);
     }
 
+
+    .step.two > .content > .cards > .card{
+
+        border: solid red;
+        width: 100%;
+        
+    }
+
     .card-footer{
     
         display: flex;
@@ -124,6 +134,9 @@
         position: fixed;
         bottom: 0;
     }
+
+    
+    
 
     .btn.next{
         position: static;
@@ -147,4 +160,10 @@
         display: none;
     }
 
+    .card > .plan.monthly :first-child ,
+    .card > .plan.yearly :first-child {
+    color: var(--Purplish-blue);
+    font-weight: 650;
+    font-size: var(--plan-font-size);
+    }
 }

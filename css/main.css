@@ -13,6 +13,8 @@
     --Alabaster: hsl(231, 100%, 99%);
     --White: hsl(0, 0%, 100%);
 
+    --plan-font-size : 30px;
+
 }
 
 body{
@@ -66,7 +68,7 @@ body{
 
 .step.two > .content > .cards > .card{
 
-    /* border: solid red; */
+    border: solid red;
     width: 22%;
     
 }
@@ -393,7 +395,7 @@ label[for='error-message']{
 .card > .plan.yearly :first-child {
     color: var(--Purplish-blue);
     font-weight: 650;
-    font-size: 18px;
+    font-size: .9rem;
 }
 
 .card > .plan.yearly :last-child{
