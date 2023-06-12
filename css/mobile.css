@@ -88,7 +88,7 @@
     }
 
     .circle > span {
-        margin-top: .5rem;
+        margin-top: .6rem;
         font-weight: 700;
         font-size: var(--side-bar-number-size);
     }
@@ -103,7 +103,7 @@
         top:var(--step-position-top);
         transform: translate(-50%, -20%);
         width:var(--step-card-width) ;
-        padding: 0px;
+        padding: 10px;
         padding-bottom: 5rem;
         padding-top:var(--step-card-padding-top);
     }
@@ -116,12 +116,25 @@
         width: var(--step-one-form-p);
     }
 
+    .step.two > .content > .cards{
+        flex-direction: column;
+
+    }
+
 
     .step.two > .content > .cards > .card{
 
-        border: solid red;
+        /* border: solid red; */
         width: 100%;
+        gap : 1rem;
+        height: fit-content;
+        flex-direction: row;
+        justify-content: flex-start;
         
+    }
+
+    .step.two > .content > .cards > .card > .plan {
+        /* border: solid red; */
     }
 
     .card-footer{
@@ -141,8 +154,9 @@
     .btn.next{
         position: static;
         /* border: solid red; */
+        width: fit-content;
         margin-left:auto;
-        margin-right: 10px;
+        margin-right: 20px;
         margin-bottom: 10px;
     }
 

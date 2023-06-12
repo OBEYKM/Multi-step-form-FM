@@ -68,7 +68,7 @@ body{
 
 .step.two > .content > .cards > .card{
 
-    border: solid red;
+    /* border: solid red; */
     width: 22%;
     
 }
@@ -146,7 +146,7 @@ body{
 }
 
 .step.four > .content > .card-summary > .card > #add-ons-option > .options{
-    color:red;
+    /* color:red; */
 }
 
 
@@ -391,6 +391,7 @@ label[for='error-message']{
     /* height: 100rem; */
 }
 
+
 .card > .plan.monthly :first-child ,
 .card > .plan.yearly :first-child {
     color: var(--Purplish-blue);
@@ -405,6 +406,14 @@ label[for='error-message']{
     margin-top: 3px;
 }
 
+.card > .plan.monthly:nth-child(2){
+    color: var(--Cool-gray);
+}
+
+.clr-cool-grey{
+    color: var(--Cool-gray);
+}
+
 .card:hover {
     border: solid var(--Purplish-blue);
     border-width: .2px;
@@ -417,17 +426,22 @@ label[for='error-message']{
 }
 
 .card-add-ons{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height:fit-content;
+    width: fit-content;
     gap:.4rem;
     margin-top: 1.4rem;
 }
 
 .card-add-ons > .card{
-    height: 2rem;
+    height: fit-content;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
+    box-sizing: border-box;
+    gap: .5rem;
 }
 
 .card-add-ons > .card > span{
@@ -442,6 +456,7 @@ label[for='error-message']{
     margin:auto 0;
     transform: scale(1.5);
     opacity: 50%;
+    width: fit-content;
 
     /* appearance: none;    appearance: none;
     -webkit-appearance: none;
